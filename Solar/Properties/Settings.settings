@@ -1,0 +1,27 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Solar.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="USR_ID" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="SAV_ID" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="dbConStr" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SERVER=118.67.133.76;port=3307;DATABASE=db_main;UID=solar;PASSWORD=Manchboy8037~!;convert zero datetime=True</Value>
+    </Setting>
+    <Setting Name="myWeb" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://www.tankauction.com/</Value>
+    </Setting>
+    <Setting Name="myFTP" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ftp://www.tankauction.com:50021/FILE/</Value>
+    </Setting>
+    <Setting Name="myFTPUsr" Type="System.String" Scope="User">
+      <Value Profile="(Default)">solar</Value>
+    </Setting>
+    <Setting Name="myFTPPwd" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Manchboy8037~!</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

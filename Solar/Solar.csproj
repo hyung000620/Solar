@@ -1,0 +1,657 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2500AC35-9BFB-4BD7-87AB-0414DD45F44E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Solar</RootNamespace>
+    <AssemblyName>Solar</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>ftp://www.tankauction.com:50021/SOLAR/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://www.tankauction.com/SOLAR/</InstallUrl>
+    <PublisherName>SOLAR</PublisherName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>setup.html</WebPage>
+    <ApplicationRevision>81</ApplicationRevision>
+    <ApplicationVersion>1.2.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>92B1A62247D9A43313D8C6CA14BE97298EE86EDE</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Solar_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HtmlAgilityPack, Version=1.11.39.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.11.39\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.mshtml, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <HintPath>..\packages\Unofficial.Microsoft.mshtml.7.0.3300\lib\net40\Microsoft.mshtml.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.Core, Version=1.0.1210.39, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.1210.39\lib\net45\Microsoft.Web.WebView2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.WinForms, Version=1.0.1210.39, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.1210.39\lib\net45\Microsoft.Web.WebView2.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.Wpf, Version=1.0.1210.39, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.1210.39\lib\net45\Microsoft.Web.WebView2.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.21.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Program Files (x86)\MySQL\MySQL Connector Net 8.0.21\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp, Version=1.50.5147.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.1.50.5147\lib\net20\PdfSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp.Charting, Version=1.50.5147.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.1.50.5147\lib\net20\PdfSharp.Charting.dll</HintPath>
+    </Reference>
+    <Reference Include="SeleniumExtras.WaitHelpers, Version=3.11.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetSeleniumExtras.WaitHelpers.3.11.0\lib\net45\SeleniumExtras.WaitHelpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=4.1.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.4.3.4\lib\net46\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.4.3.0\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Text.RegularExpressions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.RegularExpressions.4.3.1\lib\net463\System.Text.RegularExpressions.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Tulpep.NotificationWindow, Version=1.1.38.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tulpep.NotificationWindow.1.1.38\lib\net40\Tulpep.NotificationWindow.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.WebDriver.4.1.0\lib\net47\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver.Support, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.Support.4.1.0\lib\net47\WebDriver.Support.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Auto\wfAtomLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Auto\wfAtomLog.designer.cs">
+      <DependentUpon>wfAtomLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Auto\wfRgstAuto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Auto\wfRgstAuto.Designer.cs">
+      <DependentUpon>wfRgstAuto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CA\sfAptCd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CA\sfAptCd.designer.cs">
+      <DependentUpon>sfAptCd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CA\sfIntrMove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CA\sfIntrMove.designer.cs">
+      <DependentUpon>sfIntrMove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CA\sfMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CA\sfMap.designer.cs">
+      <DependentUpon>sfMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CA\sfNewExtract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CA\sfNewExtract.designer.cs">
+      <DependentUpon>sfNewExtract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CA\sfStateCopy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CA\sfStateCopy.designer.cs">
+      <DependentUpon>sfStateCopy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CA\wfBidRslt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CA\wfBidRslt.designer.cs">
+      <DependentUpon>wfBidRslt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CA\wfBldgRgst.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CA\wfBldgRgst.designer.cs">
+      <DependentUpon>wfBldgRgst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CA\wfCaMgmt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CA\wfCaMgmt.designer.cs">
+      <DependentUpon>wfCaMgmt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CA\wfChatl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CA\wfChatl.designer.cs">
+      <DependentUpon>wfChatl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CA\wfDpslStmtCmp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CA\wfDpslStmtCmp.designer.cs">
+      <DependentUpon>wfDpslStmtCmp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CA\wfFileMgmt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CA\wfFileMgmt.designer.cs">
+      <DependentUpon>wfFileMgmt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CA\wfLandPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CA\wfLandPlan.designer.cs">
+      <DependentUpon>wfLandPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CA\wfLeasTaein.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CA\wfLeasTaein.designer.cs">
+      <DependentUpon>wfLeasTaein.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CA\wfNtManual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CA\wfNtManual.designer.cs">
+      <DependentUpon>wfNtManual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CA\wfPdCnt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CA\wfPdCnt.designer.cs">
+      <DependentUpon>wfPdCnt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CA\wfRgst.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CA\wfRgst.designer.cs">
+      <DependentUpon>wfRgst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CA\wfRgstAnaly.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CA\wfRgstAnaly.Designer.cs">
+      <DependentUpon>wfRgstAnaly.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CA\wfRgstMdfy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CA\wfRgstMdfy.Designer.cs">
+      <DependentUpon>wfRgstMdfy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CA\wfRgstMgmt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CA\wfRgstMgmt.Designer.cs">
+      <DependentUpon>wfRgstMgmt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CA\wfRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CA\wfRpt.designer.cs">
+      <DependentUpon>wfRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CA\wfSkd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CA\wfSkd.designer.cs">
+      <DependentUpon>wfSkd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CA\wfUpload.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CA\wfUpload.designer.cs">
+      <DependentUpon>wfUpload.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comn\sfSrchAdrsCd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comn\sfSrchAdrsCd.designer.cs">
+      <DependentUpon>sfSrchAdrsCd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comn\wfMultiBldg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comn\wfMultiBldg.designer.cs">
+      <DependentUpon>wfMultiBldg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comn\wfRailRoad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comn\wfRailRoad.Designer.cs">
+      <DependentUpon>wfRailRoad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Etc\wfAuctSms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Etc\wfAuctSms.designer.cs">
+      <DependentUpon>wfAuctSms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Etc\wfCarCd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Etc\wfCarCd.designer.cs">
+      <DependentUpon>wfCarCd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Etc\wfLpRate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Etc\wfLpRate.designer.cs">
+      <DependentUpon>wfLpRate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comn\wfPolicyNews.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comn\wfPolicyNews.designer.cs">
+      <DependentUpon>wfPolicyNews.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hans\wfDataUdt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hans\wfDataUdt.Designer.cs">
+      <DependentUpon>wfDataUdt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lib\AdrsParser.cs" />
+    <Compile Include="lib\ApiUtil.cs" />
+    <Compile Include="lib\ApslAnaly.cs" />
+    <Compile Include="lib\AuctCd.cs" />
+    <Compile Include="lib\AuctSms.cs" />
+    <Compile Include="lib\CoordCal.cs" />
+    <Compile Include="lib\DbUtil.cs" />
+    <Compile Include="lib\FtpClient.cs" />
+    <Compile Include="lib\MouseCtrl.cs" />
+    <Compile Include="lib\MyTblPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="lib\NetUtil.cs" />
+    <Compile Include="lib\RgstAnalyNew.cs" />
+    <Compile Include="lib\RgstAnalyPa.cs" />
+    <Compile Include="lib\RgstPinTid.cs" />
+    <Compile Include="lib\SpCdtnChk.cs" />
+    <Compile Include="lib\UiUtil.cs" />
+    <Compile Include="Mgmt\wfNote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mgmt\wfNote.Designer.cs">
+      <DependentUpon>wfNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mgmt\wfStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mgmt\wfStaff.designer.cs">
+      <DependentUpon>wfStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PA\wfLeasTk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PA\wfLeasTk.designer.cs">
+      <DependentUpon>wfLeasTk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PA\wfPaMgmt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PA\wfPaMgmt.designer.cs">
+      <DependentUpon>wfPaMgmt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PA\wfTrust.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PA\wfTrust.designer.cs">
+      <DependentUpon>wfTrust.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="wfLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="wfLogin.designer.cs">
+      <DependentUpon>wfLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="wfMdiPrnt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="wfMdiPrnt.designer.cs">
+      <DependentUpon>wfMdiPrnt.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Auto\wfAtomLog.resx">
+      <DependentUpon>wfAtomLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Auto\wfRgstAuto.resx">
+      <DependentUpon>wfRgstAuto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CA\sfAptCd.resx">
+      <DependentUpon>sfAptCd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CA\sfIntrMove.resx">
+      <DependentUpon>sfIntrMove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CA\sfMap.resx">
+      <DependentUpon>sfMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CA\sfNewExtract.resx">
+      <DependentUpon>sfNewExtract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CA\sfStateCopy.resx">
+      <DependentUpon>sfStateCopy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CA\wfBidRslt.resx">
+      <DependentUpon>wfBidRslt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CA\wfBldgRgst.resx">
+      <DependentUpon>wfBldgRgst.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CA\wfCaMgmt.resx">
+      <DependentUpon>wfCaMgmt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CA\wfChatl.resx">
+      <DependentUpon>wfChatl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CA\wfDpslStmtCmp.resx">
+      <DependentUpon>wfDpslStmtCmp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CA\wfFileMgmt.resx">
+      <DependentUpon>wfFileMgmt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CA\wfLandPlan.resx">
+      <DependentUpon>wfLandPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CA\wfLeasTaein.resx">
+      <DependentUpon>wfLeasTaein.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CA\wfNtManual.resx">
+      <DependentUpon>wfNtManual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CA\wfPdCnt.resx">
+      <DependentUpon>wfPdCnt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CA\wfRgst.resx">
+      <DependentUpon>wfRgst.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CA\wfRgstAnaly.resx">
+      <DependentUpon>wfRgstAnaly.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CA\wfRgstMdfy.resx">
+      <DependentUpon>wfRgstMdfy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CA\wfRgstMgmt.resx">
+      <DependentUpon>wfRgstMgmt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CA\wfRpt.resx">
+      <DependentUpon>wfRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CA\wfSkd.resx">
+      <DependentUpon>wfSkd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CA\wfUpload.resx">
+      <DependentUpon>wfUpload.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comn\sfSrchAdrsCd.resx">
+      <DependentUpon>sfSrchAdrsCd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comn\wfMultiBldg.resx">
+      <DependentUpon>wfMultiBldg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comn\wfRailRoad.resx">
+      <DependentUpon>wfRailRoad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Etc\wfAuctSms.resx">
+      <DependentUpon>wfAuctSms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Etc\wfCarCd.resx">
+      <DependentUpon>wfCarCd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Etc\wfLpRate.resx">
+      <DependentUpon>wfLpRate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comn\wfPolicyNews.resx">
+      <DependentUpon>wfPolicyNews.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hans\wfDataUdt.resx">
+      <DependentUpon>wfDataUdt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mgmt\wfNote.resx">
+      <DependentUpon>wfNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mgmt\wfStaff.resx">
+      <DependentUpon>wfStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PA\wfLeasTk.resx">
+      <DependentUpon>wfLeasTk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PA\wfPaMgmt.resx">
+      <DependentUpon>wfPaMgmt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PA\wfTrust.resx">
+      <DependentUpon>wfTrust.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="wfLogin.resx">
+      <DependentUpon>wfLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wfMdiPrnt.resx">
+      <DependentUpon>wfMdiPrnt.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Solar_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pdftohtml.exe" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AutoItX3Lib">
+      <Guid>{F8937E53-D444-4E71-9275-35B64210CC3B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2%28x86 및 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\msg_16_blue.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\msg_16_black.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\speaker_16_red.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_16.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pencil_16_red.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>이 프로젝트는 이 컴퓨터에 없는 NuGet 패키지를 참조합니다. 해당 패키지를 다운로드하려면 NuGet 패키지 복원을 사용하십시오. 자세한 내용은 http://go.microsoft.com/fwlink/?LinkID=322105를 참조하십시오. 누락된 파일은 {0}입니다.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Selenium.WebDriver.ChromeDriver.99.0.4844.5100\build\Selenium.WebDriver.ChromeDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.WebDriver.ChromeDriver.99.0.4844.5100\build\Selenium.WebDriver.ChromeDriver.targets'))" />
+    <Error Condition="!Exists('..\packages\Selenium.WebDriver.IEDriver.4.0.0\build\Selenium.WebDriver.IEDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.WebDriver.IEDriver.4.0.0\build\Selenium.WebDriver.IEDriver.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Web.WebView2.1.0.1210.39\build\Microsoft.Web.WebView2.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Web.WebView2.1.0.1210.39\build\Microsoft.Web.WebView2.targets'))" />
+  </Target>
+  <Import Project="..\packages\Selenium.WebDriver.ChromeDriver.99.0.4844.5100\build\Selenium.WebDriver.ChromeDriver.targets" Condition="Exists('..\packages\Selenium.WebDriver.ChromeDriver.99.0.4844.5100\build\Selenium.WebDriver.ChromeDriver.targets')" />
+  <Import Project="..\packages\Selenium.WebDriver.IEDriver.4.0.0\build\Selenium.WebDriver.IEDriver.targets" Condition="Exists('..\packages\Selenium.WebDriver.IEDriver.4.0.0\build\Selenium.WebDriver.IEDriver.targets')" />
+  <Import Project="..\packages\Microsoft.Web.WebView2.1.0.1210.39\build\Microsoft.Web.WebView2.targets" Condition="Exists('..\packages\Microsoft.Web.WebView2.1.0.1210.39\build\Microsoft.Web.WebView2.targets')" />
+</Project>
