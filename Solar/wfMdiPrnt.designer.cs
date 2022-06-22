@@ -52,6 +52,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Solar";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.wfMdiPrnt_Load);
             this.ResumeLayout(false);
 
         }

@@ -28,15 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.dg = new System.Windows.Forms.DataGridView();
+            this.dg_No = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dg_PrcNm = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dg_VmNm = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dg_IP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dg_BgnDtm = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dg_EndDtm = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dg_RunTm = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dg_Idx = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbxVM = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.cbxPrcDvsn = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,16 +57,6 @@
             this.lsv = new System.Windows.Forms.ListView();
             this.lsv_Tm = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lsv_Dtl = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label3 = new System.Windows.Forms.Label();
-            this.cbxVM = new System.Windows.Forms.ComboBox();
-            this.dg_No = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dg_PrcNm = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dg_VmNm = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dg_IP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dg_BgnDtm = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dg_EndDtm = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dg_RunTm = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dg_Idx = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -102,6 +102,58 @@
             this.dg.Size = new System.Drawing.Size(944, 886);
             this.dg.TabIndex = 1;
             // 
+            // dg_No
+            // 
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dg_No.DefaultCellStyle = dataGridViewCellStyle7;
+            this.dg_No.HeaderText = "No";
+            this.dg_No.Name = "dg_No";
+            // 
+            // dg_PrcNm
+            // 
+            this.dg_PrcNm.HeaderText = "처리구분";
+            this.dg_PrcNm.Name = "dg_PrcNm";
+            // 
+            // dg_VmNm
+            // 
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dg_VmNm.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dg_VmNm.HeaderText = "가상머신";
+            this.dg_VmNm.Name = "dg_VmNm";
+            // 
+            // dg_IP
+            // 
+            this.dg_IP.HeaderText = "아이피";
+            this.dg_IP.Name = "dg_IP";
+            // 
+            // dg_BgnDtm
+            // 
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dg_BgnDtm.DefaultCellStyle = dataGridViewCellStyle9;
+            this.dg_BgnDtm.HeaderText = "시작 시간";
+            this.dg_BgnDtm.Name = "dg_BgnDtm";
+            // 
+            // dg_EndDtm
+            // 
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dg_EndDtm.DefaultCellStyle = dataGridViewCellStyle10;
+            this.dg_EndDtm.HeaderText = "완료 시간";
+            this.dg_EndDtm.Name = "dg_EndDtm";
+            // 
+            // dg_RunTm
+            // 
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dg_RunTm.DefaultCellStyle = dataGridViewCellStyle11;
+            this.dg_RunTm.HeaderText = "소요 시간";
+            this.dg_RunTm.Name = "dg_RunTm";
+            // 
+            // dg_Idx
+            // 
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dg_Idx.DefaultCellStyle = dataGridViewCellStyle12;
+            this.dg_Idx.HeaderText = "idx";
+            this.dg_Idx.Name = "dg_Idx";
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.cbxVM);
@@ -120,6 +172,38 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "<검 색>";
+            // 
+            // cbxVM
+            // 
+            this.cbxVM.FormattingEnabled = true;
+            this.cbxVM.Items.AddRange(new object[] {
+            "-선택-",
+            "SOLAR",
+            "VM-1",
+            "VM-2",
+            "VM-3",
+            "VM-4",
+            "VM-5",
+            "VM-6",
+            "VM-7",
+            "VM-8",
+            "VM-9",
+            "VM-10",
+            "VM-11",
+            "VM-12"});
+            this.cbxVM.Location = new System.Drawing.Point(674, 30);
+            this.cbxVM.Name = "cbxVM";
+            this.cbxVM.Size = new System.Drawing.Size(121, 20);
+            this.cbxVM.TabIndex = 13;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(615, 34);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(53, 12);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "가상머신";
             // 
             // cbxPrcDvsn
             // 
@@ -213,90 +297,6 @@
             // 
             this.lsv_Dtl.Text = "상세 내용";
             this.lsv_Dtl.Width = 600;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(615, 34);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 12);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "가상머신";
-            // 
-            // cbxVM
-            // 
-            this.cbxVM.FormattingEnabled = true;
-            this.cbxVM.Items.AddRange(new object[] {
-            "-선택-",
-            "SOLAR",
-            "VM-1",
-            "VM-2",
-            "VM-3",
-            "VM-4",
-            "VM-5",
-            "VM-6",
-            "VM-7",
-            "VM-8",
-            "VM-9",
-            "VM-10",
-            "VM-11",
-            "VM-12"});
-            this.cbxVM.Location = new System.Drawing.Point(674, 30);
-            this.cbxVM.Name = "cbxVM";
-            this.cbxVM.Size = new System.Drawing.Size(121, 20);
-            this.cbxVM.TabIndex = 13;
-            // 
-            // dg_No
-            // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dg_No.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dg_No.HeaderText = "No";
-            this.dg_No.Name = "dg_No";
-            // 
-            // dg_PrcNm
-            // 
-            this.dg_PrcNm.HeaderText = "처리구분";
-            this.dg_PrcNm.Name = "dg_PrcNm";
-            // 
-            // dg_VmNm
-            // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dg_VmNm.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dg_VmNm.HeaderText = "가상머신";
-            this.dg_VmNm.Name = "dg_VmNm";
-            // 
-            // dg_IP
-            // 
-            this.dg_IP.HeaderText = "아이피";
-            this.dg_IP.Name = "dg_IP";
-            // 
-            // dg_BgnDtm
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dg_BgnDtm.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dg_BgnDtm.HeaderText = "시작 시간";
-            this.dg_BgnDtm.Name = "dg_BgnDtm";
-            // 
-            // dg_EndDtm
-            // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dg_EndDtm.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dg_EndDtm.HeaderText = "완료 시간";
-            this.dg_EndDtm.Name = "dg_EndDtm";
-            // 
-            // dg_RunTm
-            // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dg_RunTm.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dg_RunTm.HeaderText = "소요 시간";
-            this.dg_RunTm.Name = "dg_RunTm";
-            // 
-            // dg_Idx
-            // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dg_Idx.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dg_Idx.HeaderText = "idx";
-            this.dg_Idx.Name = "dg_Idx";
             // 
             // wfAtomLog
             // 

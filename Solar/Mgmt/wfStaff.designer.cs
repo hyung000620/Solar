@@ -28,16 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.dg = new System.Windows.Forms.DataGridView();
+            this.dg_No = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dg_Nm = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dg_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dg_Level = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dg_Idx = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dg_State = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnSrch = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabInfo = new System.Windows.Forms.TabPage();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtLevel = new System.Windows.Forms.TextBox();
             this.txtUsrIdx = new System.Windows.Forms.TextBox();
             this.btnNew = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -50,13 +58,7 @@
             this.txtUsrNm = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.txtLevel = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dg_No = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dg_Nm = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dg_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dg_Level = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dg_Idx = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -94,13 +96,55 @@
             this.dg_Nm,
             this.dg_Id,
             this.dg_Level,
-            this.dg_Idx});
+            this.dg_Idx,
+            this.dg_State});
             this.dg.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dg.Location = new System.Drawing.Point(0, 104);
             this.dg.Name = "dg";
             this.dg.RowTemplate.Height = 23;
             this.dg.Size = new System.Drawing.Size(794, 857);
             this.dg.TabIndex = 1;
+            // 
+            // dg_No
+            // 
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dg_No.DefaultCellStyle = dataGridViewCellStyle21;
+            this.dg_No.HeaderText = "No";
+            this.dg_No.Name = "dg_No";
+            this.dg_No.Width = 50;
+            // 
+            // dg_Nm
+            // 
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dg_Nm.DefaultCellStyle = dataGridViewCellStyle22;
+            this.dg_Nm.HeaderText = "직원명";
+            this.dg_Nm.Name = "dg_Nm";
+            // 
+            // dg_Id
+            // 
+            this.dg_Id.HeaderText = "아이디";
+            this.dg_Id.Name = "dg_Id";
+            // 
+            // dg_Level
+            // 
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dg_Level.DefaultCellStyle = dataGridViewCellStyle23;
+            this.dg_Level.HeaderText = "레벨";
+            this.dg_Level.Name = "dg_Level";
+            this.dg_Level.Width = 60;
+            // 
+            // dg_Idx
+            // 
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dg_Idx.DefaultCellStyle = dataGridViewCellStyle24;
+            this.dg_Idx.HeaderText = "idx";
+            this.dg_Idx.Name = "dg_Idx";
+            this.dg_Idx.Width = 50;
+            // 
+            // dg_State
+            // 
+            this.dg_State.HeaderText = "상태";
+            this.dg_State.Name = "dg_State";
             // 
             // groupBox1
             // 
@@ -137,6 +181,7 @@
             // 
             // tabInfo
             // 
+            this.tabInfo.Controls.Add(this.button1);
             this.tabInfo.Controls.Add(this.label4);
             this.tabInfo.Controls.Add(this.txtLevel);
             this.tabInfo.Controls.Add(this.txtUsrIdx);
@@ -158,6 +203,22 @@
             this.tabInfo.Text = "직원정보";
             this.tabInfo.UseVisualStyleBackColor = true;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(74, 193);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(53, 12);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "관리레벨";
+            // 
+            // txtLevel
+            // 
+            this.txtLevel.Location = new System.Drawing.Point(131, 190);
+            this.txtLevel.Name = "txtLevel";
+            this.txtLevel.Size = new System.Drawing.Size(57, 21);
+            this.txtLevel.TabIndex = 7;
+            // 
             // txtUsrIdx
             // 
             this.txtUsrIdx.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -171,7 +232,7 @@
             // 
             // btnNew
             // 
-            this.btnNew.Location = new System.Drawing.Point(6, 6);
+            this.btnNew.Location = new System.Drawing.Point(6, 8);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(49, 23);
             this.btnNew.TabIndex = 5;
@@ -266,57 +327,15 @@
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // txtLevel
+            // button1
             // 
-            this.txtLevel.Location = new System.Drawing.Point(131, 190);
-            this.txtLevel.Name = "txtLevel";
-            this.txtLevel.Size = new System.Drawing.Size(57, 21);
-            this.txtLevel.TabIndex = 7;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(74, 193);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 12);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "관리레벨";
-            // 
-            // dg_No
-            // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dg_No.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dg_No.HeaderText = "No";
-            this.dg_No.Name = "dg_No";
-            this.dg_No.Width = 50;
-            // 
-            // dg_Nm
-            // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dg_Nm.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dg_Nm.HeaderText = "직원명";
-            this.dg_Nm.Name = "dg_Nm";
-            // 
-            // dg_Id
-            // 
-            this.dg_Id.HeaderText = "아이디";
-            this.dg_Id.Name = "dg_Id";
-            // 
-            // dg_Level
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dg_Level.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dg_Level.HeaderText = "레벨";
-            this.dg_Level.Name = "dg_Level";
-            this.dg_Level.Width = 60;
-            // 
-            // dg_Idx
-            // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dg_Idx.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dg_Idx.HeaderText = "idx";
-            this.dg_Idx.Name = "dg_Idx";
-            this.dg_Idx.Width = 50;
+            this.button1.Location = new System.Drawing.Point(61, 9);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(74, 22);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "퇴사처리";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.btnLeave_Click);
             // 
             // wfStaff
             // 
@@ -367,5 +386,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dg_Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn dg_Level;
         private System.Windows.Forms.DataGridViewTextBoxColumn dg_Idx;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dg_State;
+        private System.Windows.Forms.Button button1;
     }
 }

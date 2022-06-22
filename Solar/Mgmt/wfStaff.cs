@@ -24,7 +24,6 @@ namespace Solar.Mgmt
             ui.DgSetRead(dg);
             dg.CellClick += (s, e) => { dg_SelectionChanged(null, null); };
         }
-
         private void btnSave_Click(object sender, EventArgs e)
         {
             string sql, usrId, usrNm, pwd, usrIdx, level, cvp;
@@ -46,6 +45,7 @@ namespace Solar.Mgmt
 
             if (usrIdx == string.Empty)
             {
+                cvp += ",staff_menu='1010|1011|1012|1013|1015|1016|1019|1020|1023|1030|1110|1111|1112|1113|1210|1310|1510|1511|1512|1513|1912|1914|1916|1917|1918|1919|1922|1923|1924|1927|1928|1929|1930|2010|2110|2212|2213|2214|2215|2410|2510', start_dt=CURDATE()";
                 sql = "insert into db_tank.tz_staff set " + cvp;
             }
             else
@@ -59,6 +59,7 @@ namespace Solar.Mgmt
 
             db.Open();
             db.ExeQry(sql, sp);
+            sp.Clear();
             db.Close();
 
             MessageBox.Show("저장 되었습니다.");
@@ -88,6 +89,15 @@ namespace Solar.Mgmt
                 dg["dg_Id", i].Value = dr["id"];
                 dg["dg_Level", i].Value = dr["level"];
                 dg["dg_Idx", i].Value = dr["idx"];
+                if ((string)dr["staff_menu"] == string.Empty)
+                {
+                    dg["dg_State", i].Value = "퇴사";
+                    dg.Rows[i].DefaultCellStyle.BackColor = Color.Red;
+                }
+                else
+                {
+                    dg["dg_State", i].Value = "재직중";
+                }
                 rowCnt--;
             }
             dr.Close();
@@ -122,6 +132,28 @@ namespace Solar.Mgmt
         private void btnNew_Click(object sender, EventArgs e)
         {
             ui.FormClear(tabInfo);
+        }
+
+        private void btnLeave_Click(object sender, EventArgs e)
+        {
+            string sql, usrId;
+
+            usrId = txtUsrId.Text.Trim();
+
+            List<MySqlParameter> sp = new List<MySqlParameter>();
+
+            sql = "update db_tank.tz_staff set level=0, staff_menu='', resign_dt=CURDATE(), team=0 where id=@id";
+
+            sp.Add(new MySqlParameter("@id", usrId));
+
+            db.Open();
+            db.ExeQry(sql, sp);
+            db.Close();
+
+            MessageBox.Show("퇴사처리 되었습니다.");
+
+            ui.FormClear(tabInfo);
+            btnSrch_Click(null, null);
         }
     }
 }

@@ -54,7 +54,7 @@ namespace Solar
                 {
                     senderNm = dtStaff.Rows.Cast<DataRow>().Where(t => t["id"].ToString() == dr["sid"].ToString()).FirstOrDefault()["name"].ToString();
                     title = dr["title"].ToString();
-                }
+                } 
             }
             dr.Close();            
             db.ExeQry($"update db_tank.tz_note set noti=1 where rid='{myId}' and rcnt=0 and noti=0");
@@ -214,6 +214,17 @@ namespace Solar
                 ts.DropDownItems.AddRange(tsi);
                 ms.Items.Add(ts);
             }
+            if (myId == "dksms10")
+            {
+                ts = new ToolStripMenuItem("LEE");
+                ts.BackColor = Color.LightGreen;
+                tsi = new ToolStripMenuItem[]
+                {
+                    new ToolStripMenuItem("[사내]-직원관리", null, ShowForm, "Mgmt.wfStaff")
+                };
+                ts.DropDownItems.AddRange(tsi);
+                ms.Items.Add(ts);
+            }
             this.MainMenuStrip = ms;
             this.Controls.Add(ms);
 
@@ -250,6 +261,11 @@ namespace Solar
                 fm.WindowState = FormWindowState.Maximized;
                 fm.Show();
             }
+        }
+
+        private void wfMdiPrnt_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
