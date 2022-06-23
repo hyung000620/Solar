@@ -15,14 +15,16 @@ namespace Solar.Mgmt
     {
         UiUtil ui = new UiUtil();
         DbUtil db = new DbUtil();
-
-
+        Dictionary<int, string> dict = new Dictionary<int, string>();
+        
         public wfStaff()
         {
             InitializeComponent();
 
             ui.DgSetRead(dg);
             dg.CellClick += (s, e) => { dg_SelectionChanged(null, null); };
+            cbxState.SelectedIndex= 0;
+            cbxTeam.SelectedIndex = 0;
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
@@ -33,6 +35,20 @@ namespace Solar.Mgmt
             usrId = txtUsrId.Text.Trim();
             level = txtLevel.Text.Trim();
             pwd = txtPwd.Text.Trim();
+
+            if(usrNm == String.Empty)
+            {
+                MessageBox.Show("직원명을 입력해주세요.");
+                return;
+            }
+
+            if (usrId == String.Empty)
+            {
+                MessageBox.Show("아이디를 입력해주세요.");
+                return;
+            }
+
+
 
             List<MySqlParameter> sp = new List<MySqlParameter>();
             
@@ -72,11 +88,18 @@ namespace Solar.Mgmt
         {
             int i = 0, rowCnt = 0;
             string sql, cond;
-
+            cond = "1 ";
+            if (cbxState.SelectedIndex == 1)
+            {
+                cond += "and level != 0";
+            } 
+            else if (cbxState.SelectedIndex == 2)
+            {
+                cond += "and level = 0";
+            }
             dg.SelectionChanged -= dg_SelectionChanged;
             dg.Rows.Clear();
 
-            cond = "1";
             sql = "select * from db_tank.tz_staff where " + cond + " order by idx desc";
             db.Open();
             rowCnt = Convert.ToInt32(db.RowCnt(sql));
@@ -89,10 +112,10 @@ namespace Solar.Mgmt
                 dg["dg_Id", i].Value = dr["id"];
                 dg["dg_Level", i].Value = dr["level"];
                 dg["dg_Idx", i].Value = dr["idx"];
-                if ((string)dr["staff_menu"] == string.Empty)
+                if (Convert.ToInt32(dr["level"])==0)
                 {
                     dg["dg_State", i].Value = "퇴사";
-                    dg.Rows[i].DefaultCellStyle.BackColor = Color.Red;
+                    dg.Rows[i].DefaultCellStyle.BackColor = Color.Gray;
                 }
                 else
                 {
@@ -139,18 +162,32 @@ namespace Solar.Mgmt
             string sql, usrId;
 
             usrId = txtUsrId.Text.Trim();
+            if (usrId.Length == 0)
+            {
+                MessageBox.Show("선택된 아이디가 없습니다.");
+                return;
+            }
+            DialogResult result = MessageBox.Show("퇴사처리 하시겠습니까?", "", MessageBoxButtons.YesNo);
+            if(result == DialogResult.Yes)
+            {
+                List<MySqlParameter> sp = new List<MySqlParameter>();
 
-            List<MySqlParameter> sp = new List<MySqlParameter>();
+                sql = "update db_tank.tz_staff set level=0, staff_menu='', resign_dt=CURDATE(), team=0 where id=@id";
 
-            sql = "update db_tank.tz_staff set level=0, staff_menu='', resign_dt=CURDATE(), team=0 where id=@id";
+                sp.Add(new MySqlParameter("@id", usrId));
 
-            sp.Add(new MySqlParameter("@id", usrId));
+                db.Open();
+                db.ExeQry(sql, sp);
+                sp.Clear();
+                db.Close();
+                MessageBox.Show("퇴사처리 되었습니다.");
+            }
+            else
+            {
+                MessageBox.Show("취소되었습니다.");
+                return;
+            }
 
-            db.Open();
-            db.ExeQry(sql, sp);
-            db.Close();
-
-            MessageBox.Show("퇴사처리 되었습니다.");
 
             ui.FormClear(tabInfo);
             btnSrch_Click(null, null);

@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.dg = new System.Windows.Forms.DataGridView();
             this.dg_No = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,9 +41,14 @@
             this.dg_Idx = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dg_State = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cbxState = new System.Windows.Forms.ComboBox();
             this.btnSrch = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabInfo = new System.Windows.Forms.TabPage();
+            this.label7 = new System.Windows.Forms.Label();
+            this.cbxTeam = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.txtLevel = new System.Windows.Forms.TextBox();
             this.txtUsrIdx = new System.Windows.Forms.TextBox();
@@ -58,7 +63,6 @@
             this.txtUsrNm = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -107,16 +111,16 @@
             // 
             // dg_No
             // 
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dg_No.DefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dg_No.DefaultCellStyle = dataGridViewCellStyle5;
             this.dg_No.HeaderText = "No";
             this.dg_No.Name = "dg_No";
             this.dg_No.Width = 50;
             // 
             // dg_Nm
             // 
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dg_Nm.DefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dg_Nm.DefaultCellStyle = dataGridViewCellStyle6;
             this.dg_Nm.HeaderText = "직원명";
             this.dg_Nm.Name = "dg_Nm";
             // 
@@ -127,16 +131,16 @@
             // 
             // dg_Level
             // 
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dg_Level.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dg_Level.DefaultCellStyle = dataGridViewCellStyle7;
             this.dg_Level.HeaderText = "레벨";
             this.dg_Level.Name = "dg_Level";
             this.dg_Level.Width = 60;
             // 
             // dg_Idx
             // 
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dg_Idx.DefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dg_Idx.DefaultCellStyle = dataGridViewCellStyle8;
             this.dg_Idx.HeaderText = "idx";
             this.dg_Idx.Name = "dg_Idx";
             this.dg_Idx.Width = 50;
@@ -148,6 +152,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.cbxState);
             this.groupBox1.Controls.Add(this.btnSrch);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
@@ -156,6 +162,28 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(542, 70);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(29, 12);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "상태";
+            // 
+            // cbxState
+            // 
+            this.cbxState.FormattingEnabled = true;
+            this.cbxState.Items.AddRange(new object[] {
+            "-선택-",
+            "재직중",
+            "퇴사"});
+            this.cbxState.Location = new System.Drawing.Point(577, 67);
+            this.cbxState.Name = "cbxState";
+            this.cbxState.Size = new System.Drawing.Size(97, 20);
+            this.cbxState.TabIndex = 1;
+            this.cbxState.Text = "-선택-";
             // 
             // btnSrch
             // 
@@ -181,6 +209,8 @@
             // 
             // tabInfo
             // 
+            this.tabInfo.Controls.Add(this.label7);
+            this.tabInfo.Controls.Add(this.cbxTeam);
             this.tabInfo.Controls.Add(this.button1);
             this.tabInfo.Controls.Add(this.label4);
             this.tabInfo.Controls.Add(this.txtLevel);
@@ -202,6 +232,45 @@
             this.tabInfo.TabIndex = 0;
             this.tabInfo.Text = "직원정보";
             this.tabInfo.UseVisualStyleBackColor = true;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(70, 233);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(51, 12);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "팀(소속)";
+            // 
+            // cbxTeam
+            // 
+            this.cbxTeam.FormattingEnabled = true;
+            this.cbxTeam.Items.AddRange(new object[] {
+            "-선택-",
+            "경영기획팀",
+            "교육지원팀",
+            "개발팀",
+            "전산팀",
+            "데이터관리팀",
+            "개발기획팀",
+            "대부중개팀",
+            "채권매입/관리팀",
+            "무인텔팀",
+            "회계/관리팀"});
+            this.cbxTeam.Location = new System.Drawing.Point(131, 229);
+            this.cbxTeam.Name = "cbxTeam";
+            this.cbxTeam.Size = new System.Drawing.Size(121, 20);
+            this.cbxTeam.TabIndex = 10;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(61, 9);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(74, 22);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "퇴사처리";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.btnLeave_Click);
             // 
             // label4
             // 
@@ -327,16 +396,6 @@
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(61, 9);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(74, 22);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "퇴사처리";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.btnLeave_Click);
-            // 
             // wfStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -351,6 +410,7 @@
             this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dg)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabInfo.ResumeLayout(false);
             this.tabInfo.PerformLayout();
@@ -388,5 +448,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dg_Idx;
         private System.Windows.Forms.DataGridViewTextBoxColumn dg_State;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox cbxState;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cbxTeam;
+        private System.Windows.Forms.Label label7;
     }
 }
