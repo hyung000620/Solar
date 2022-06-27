@@ -15,7 +15,7 @@ namespace Solar.Mgmt
     {
         UiUtil ui = new UiUtil();
         DbUtil db = new DbUtil();
-        Dictionary<int, string> dict = new Dictionary<int, string>();
+        Dictionary<string, string> dict = new Dictionary<string, string>();
         
         public wfStaff()
         {
@@ -24,19 +24,38 @@ namespace Solar.Mgmt
             ui.DgSetRead(dg);
             dg.CellClick += (s, e) => { dg_SelectionChanged(null, null); };
             cbxState.SelectedIndex= 0;
+
+            dict.Add("0", "-선택-");
+            dict.Add("100", "전산팀");
+            dict.Add("101", "데이터관리팀");
+            dict.Add("102", "개발기획팀");
+            dict.Add("109", "개발팀");
+            dict.Add("200", "경영기획팀");
+            dict.Add("201", "교육지원팀");
+
+            cbxTeam.DataSource = new BindingSource(dict, null);
+            cbxTeam.DisplayMember = "Value";
+            cbxTeam.ValueMember = "Key";
             cbxTeam.SelectedIndex = 0;
+
+            cbxTeam2.DataSource = new BindingSource(dict, null);
+            cbxTeam2.DisplayMember = "Value";
+            cbxTeam2.ValueMember = "Key";
+            cbxTeam2.SelectedIndex = 0;
+
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
-            string sql, usrId, usrNm, pwd, usrIdx, level, cvp;
+            string sql, usrId, usrNm, pwd, usrIdx, level, cvp, team;
 
             usrIdx = txtUsrIdx.Text;
             usrNm = txtUsrNm.Text.Trim();
             usrId = txtUsrId.Text.Trim();
             level = txtLevel.Text.Trim();
             pwd = txtPwd.Text.Trim();
+            team = ((KeyValuePair<string, string>)cbxTeam.SelectedItem).Key;
 
-            if(usrNm == String.Empty)
+            if (usrNm == String.Empty)
             {
                 MessageBox.Show("직원명을 입력해주세요.");
                 return;
@@ -52,7 +71,7 @@ namespace Solar.Mgmt
 
             List<MySqlParameter> sp = new List<MySqlParameter>();
             
-            cvp = "name=@nm, id=@id, level=@level";
+            cvp = "name=@nm, id=@id, level=@level, team=@team";
 
             if (usrIdx == string.Empty || chkPwdMdfy.Checked)
             {
@@ -72,7 +91,8 @@ namespace Solar.Mgmt
             sp.Add(new MySqlParameter("@nm", usrNm));
             sp.Add(new MySqlParameter("@id", usrId));
             sp.Add(new MySqlParameter("@level", level));
-
+            sp.Add(new MySqlParameter("@team", team));
+            
             db.Open();
             db.ExeQry(sql, sp);
             sp.Clear();
@@ -87,16 +107,23 @@ namespace Solar.Mgmt
         private void btnSrch_Click(object sender, EventArgs e)
         {
             int i = 0, rowCnt = 0;
-            string sql, cond;
+            string sql, cond, team;
             cond = "1 ";
+            team = ((KeyValuePair<string, string>)cbxTeam2.SelectedItem).Key;
+
             if (cbxState.SelectedIndex == 1)
             {
-                cond += "and level != 0";
+                cond += " and level != 0";
             } 
             else if (cbxState.SelectedIndex == 2)
             {
-                cond += "and level = 0";
+                cond += " and level = 0";
             }
+            if(team != "0")
+            {
+                cond += " and team =" + team; 
+            }
+
             dg.SelectionChanged -= dg_SelectionChanged;
             dg.Rows.Clear();
 
@@ -148,6 +175,8 @@ namespace Solar.Mgmt
             txtUsrNm.Text = dr["name"].ToString();
             txtUsrId.Text = dr["id"].ToString();
             txtLevel.Text = dr["level"].ToString();
+            cbxTeam.SelectedValue = dr["team"].ToString();
+
             dr.Close();
             db.Close();
         }

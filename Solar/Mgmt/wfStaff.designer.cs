@@ -63,6 +63,8 @@
             this.txtUsrNm = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.cbxTeam2 = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -152,6 +154,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.cbxTeam2);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.cbxState);
             this.groupBox1.Controls.Add(this.btnSrch);
@@ -264,12 +268,13 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.Firebrick;
             this.button1.Location = new System.Drawing.Point(61, 9);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(74, 22);
             this.button1.TabIndex = 9;
             this.button1.Text = "퇴사처리";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.btnLeave_Click);
             // 
             // label4
@@ -396,6 +401,23 @@
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // cbxTeam2
+            // 
+            this.cbxTeam2.FormattingEnabled = true;
+            this.cbxTeam2.Location = new System.Drawing.Point(422, 67);
+            this.cbxTeam2.Name = "cbxTeam2";
+            this.cbxTeam2.Size = new System.Drawing.Size(100, 20);
+            this.cbxTeam2.TabIndex = 10;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(378, 70);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(29, 12);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "팀별";
+            // 
             // wfStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -452,5 +474,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cbxTeam;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox cbxTeam2;
+        private System.Windows.Forms.Label label6;
     }
 }
