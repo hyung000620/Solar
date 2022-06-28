@@ -49,12 +49,12 @@
             this.dgCo_Cd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgCo_Dmst = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnModel = new System.Windows.Forms.Button();
-            this.btnCmpy = new System.Windows.Forms.Button();
-            this.txtNewCmpyCnt = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNewModelCnt = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.txtNewCmpyCnt = new System.Windows.Forms.TextBox();
+            this.btnModel = new System.Windows.Forms.Button();
+            this.btnCmpy = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -210,34 +210,14 @@
             this.panel1.Size = new System.Drawing.Size(972, 51);
             this.panel1.TabIndex = 0;
             // 
-            // btnModel
+            // label2
             // 
-            this.btnModel.Location = new System.Drawing.Point(632, 12);
-            this.btnModel.Name = "btnModel";
-            this.btnModel.Size = new System.Drawing.Size(75, 23);
-            this.btnModel.TabIndex = 0;
-            this.btnModel.Text = "모델그룹";
-            this.btnModel.UseVisualStyleBackColor = true;
-            this.btnModel.Click += new System.EventHandler(this.btnModel_Click);
-            // 
-            // btnCmpy
-            // 
-            this.btnCmpy.Location = new System.Drawing.Point(115, 12);
-            this.btnCmpy.Name = "btnCmpy";
-            this.btnCmpy.Size = new System.Drawing.Size(75, 23);
-            this.btnCmpy.TabIndex = 0;
-            this.btnCmpy.Text = "제조사";
-            this.btnCmpy.UseVisualStyleBackColor = true;
-            this.btnCmpy.Click += new System.EventHandler(this.btnCmpy_Click);
-            // 
-            // txtNewCmpyCnt
-            // 
-            this.txtNewCmpyCnt.Location = new System.Drawing.Point(251, 12);
-            this.txtNewCmpyCnt.Name = "txtNewCmpyCnt";
-            this.txtNewCmpyCnt.Size = new System.Drawing.Size(48, 21);
-            this.txtNewCmpyCnt.TabIndex = 1;
-            this.txtNewCmpyCnt.Text = "0";
-            this.txtNewCmpyCnt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(739, 17);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(29, 12);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "신규";
             // 
             // label1
             // 
@@ -257,14 +237,34 @@
             this.txtNewModelCnt.Text = "0";
             this.txtNewModelCnt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // label2
+            // txtNewCmpyCnt
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(739, 17);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 12);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "신규";
+            this.txtNewCmpyCnt.Location = new System.Drawing.Point(251, 12);
+            this.txtNewCmpyCnt.Name = "txtNewCmpyCnt";
+            this.txtNewCmpyCnt.Size = new System.Drawing.Size(48, 21);
+            this.txtNewCmpyCnt.TabIndex = 1;
+            this.txtNewCmpyCnt.Text = "0";
+            this.txtNewCmpyCnt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // btnModel
+            // 
+            this.btnModel.Location = new System.Drawing.Point(632, 12);
+            this.btnModel.Name = "btnModel";
+            this.btnModel.Size = new System.Drawing.Size(75, 23);
+            this.btnModel.TabIndex = 0;
+            this.btnModel.Text = "모델그룹";
+            this.btnModel.UseVisualStyleBackColor = true;
+            this.btnModel.Click += new System.EventHandler(this.btnModel_Click);
+            // 
+            // btnCmpy
+            // 
+            this.btnCmpy.Location = new System.Drawing.Point(115, 12);
+            this.btnCmpy.Name = "btnCmpy";
+            this.btnCmpy.Size = new System.Drawing.Size(75, 23);
+            this.btnCmpy.TabIndex = 0;
+            this.btnCmpy.Text = "제조사";
+            this.btnCmpy.UseVisualStyleBackColor = true;
+            this.btnCmpy.Click += new System.EventHandler(this.btnCmpy_Click);
             // 
             // wfCarCd
             // 

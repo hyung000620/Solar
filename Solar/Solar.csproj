@@ -397,6 +397,12 @@
     <Compile Include="lib\RgstPinTid.cs" />
     <Compile Include="lib\SpCdtnChk.cs" />
     <Compile Include="lib\UiUtil.cs" />
+    <Compile Include="Mgmt\wfCarDoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mgmt\wfCarDoc.Designer.cs">
+      <DependentUpon>wfCarDoc.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mgmt\wfNote.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -536,6 +542,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Hans\wfDataUdt.resx">
       <DependentUpon>wfDataUdt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mgmt\wfCarDoc.resx">
+      <DependentUpon>wfCarDoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mgmt\wfNote.resx">
       <DependentUpon>wfNote.cs</DependentUpon>

@@ -220,7 +220,8 @@ namespace Solar
                 ts.BackColor = Color.LightGreen;
                 tsi = new ToolStripMenuItem[]
                 {
-                    new ToolStripMenuItem("[사내]-직원관리", null, ShowForm, "Mgmt.wfStaff")
+                    new ToolStripMenuItem("[사내]-직원관리", null, ShowForm, "Mgmt.wfStaff"),
+                    new ToolStripMenuItem("자동차-등록원부/사고이력",null,ShowForm,"Mgmt.wfCarDoc")
                 };
                 ts.DropDownItems.AddRange(tsi);
                 ms.Items.Add(ts);
