@@ -29,36 +29,36 @@ namespace Solar.CA
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(wfFileMgmt));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle45 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle46 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle47 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle48 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle49 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle50 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle51 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle52 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle53 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle54 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle55 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle56 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle57 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle58 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tbcL = new System.Windows.Forms.TabControl();
             this.tabSrchList = new System.Windows.Forms.TabPage();
@@ -338,9 +338,9 @@ namespace Solar.CA
             // 
             // dg_No
             // 
-            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle30.ForeColor = System.Drawing.Color.Silver;
-            this.dg_No.DefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Silver;
+            this.dg_No.DefaultCellStyle = dataGridViewCellStyle1;
             this.dg_No.Frozen = true;
             this.dg_No.HeaderText = "No";
             this.dg_No.Name = "dg_No";
@@ -348,9 +348,9 @@ namespace Solar.CA
             // 
             // dg_Tid
             // 
-            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle31.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dg_Tid.DefaultCellStyle = dataGridViewCellStyle31;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dg_Tid.DefaultCellStyle = dataGridViewCellStyle2;
             this.dg_Tid.Frozen = true;
             this.dg_Tid.HeaderText = "TID";
             this.dg_Tid.Name = "dg_Tid";
@@ -358,8 +358,8 @@ namespace Solar.CA
             // 
             // dg_CS
             // 
-            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dg_CS.DefaultCellStyle = dataGridViewCellStyle32;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dg_CS.DefaultCellStyle = dataGridViewCellStyle3;
             this.dg_CS.Frozen = true;
             this.dg_CS.HeaderText = "법원";
             this.dg_CS.Name = "dg_CS";
@@ -374,16 +374,16 @@ namespace Solar.CA
             // 
             // dg_SN
             // 
-            dataGridViewCellStyle33.BackColor = System.Drawing.SystemColors.Info;
-            this.dg_SN.DefaultCellStyle = dataGridViewCellStyle33;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Info;
+            this.dg_SN.DefaultCellStyle = dataGridViewCellStyle4;
             this.dg_SN.Frozen = true;
             this.dg_SN.HeaderText = "사건번호";
             this.dg_SN.Name = "dg_SN";
             // 
             // dg_BidDt
             // 
-            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dg_BidDt.DefaultCellStyle = dataGridViewCellStyle34;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dg_BidDt.DefaultCellStyle = dataGridViewCellStyle5;
             this.dg_BidDt.HeaderText = "입찰일";
             this.dg_BidDt.Name = "dg_BidDt";
             this.dg_BidDt.Width = 70;
@@ -396,49 +396,49 @@ namespace Solar.CA
             // 
             // dg_Cat
             // 
-            dataGridViewCellStyle35.Font = new System.Drawing.Font("돋움", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.dg_Cat.DefaultCellStyle = dataGridViewCellStyle35;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("돋움", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.dg_Cat.DefaultCellStyle = dataGridViewCellStyle6;
             this.dg_Cat.HeaderText = "물건종류";
             this.dg_Cat.Name = "dg_Cat";
             this.dg_Cat.Width = 80;
             // 
             // dg_FbCnt
             // 
-            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dg_FbCnt.DefaultCellStyle = dataGridViewCellStyle36;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dg_FbCnt.DefaultCellStyle = dataGridViewCellStyle7;
             this.dg_FbCnt.HeaderText = "유찰";
             this.dg_FbCnt.Name = "dg_FbCnt";
             this.dg_FbCnt.Width = 55;
             // 
             // dg_ApslAmt
             // 
-            dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dg_ApslAmt.DefaultCellStyle = dataGridViewCellStyle37;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dg_ApslAmt.DefaultCellStyle = dataGridViewCellStyle8;
             this.dg_ApslAmt.HeaderText = "감정가";
             this.dg_ApslAmt.Name = "dg_ApslAmt";
             this.dg_ApslAmt.Width = 80;
             // 
             // dg_MinbAmt
             // 
-            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle38.ForeColor = System.Drawing.Color.Silver;
-            this.dg_MinbAmt.DefaultCellStyle = dataGridViewCellStyle38;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Silver;
+            this.dg_MinbAmt.DefaultCellStyle = dataGridViewCellStyle9;
             this.dg_MinbAmt.HeaderText = "최저가";
             this.dg_MinbAmt.Name = "dg_MinbAmt";
             this.dg_MinbAmt.Width = 80;
             // 
             // dg_Adrs
             // 
-            dataGridViewCellStyle39.Font = new System.Drawing.Font("돋움", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.dg_Adrs.DefaultCellStyle = dataGridViewCellStyle39;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("돋움", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.dg_Adrs.DefaultCellStyle = dataGridViewCellStyle10;
             this.dg_Adrs.HeaderText = "소재지";
             this.dg_Adrs.Name = "dg_Adrs";
             this.dg_Adrs.Width = 300;
             // 
             // dg_2ndDt
             // 
-            dataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dg_2ndDt.DefaultCellStyle = dataGridViewCellStyle40;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dg_2ndDt.DefaultCellStyle = dataGridViewCellStyle11;
             this.dg_2ndDt.HeaderText = "등록일";
             this.dg_2ndDt.Name = "dg_2ndDt";
             this.dg_2ndDt.Width = 70;
@@ -1200,17 +1200,17 @@ namespace Solar.CA
             // 
             // dgL_Pn
             // 
-            dataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle41.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgL_Pn.DefaultCellStyle = dataGridViewCellStyle41;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgL_Pn.DefaultCellStyle = dataGridViewCellStyle12;
             this.dgL_Pn.HeaderText = "물번";
             this.dgL_Pn.Name = "dgL_Pn";
             this.dgL_Pn.Width = 55;
             // 
             // dgL_LsNo
             // 
-            dataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgL_LsNo.DefaultCellStyle = dataGridViewCellStyle42;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgL_LsNo.DefaultCellStyle = dataGridViewCellStyle13;
             this.dgL_LsNo.HeaderText = "LsNo";
             this.dgL_LsNo.Name = "dgL_LsNo";
             this.dgL_LsNo.Width = 55;
@@ -1223,8 +1223,8 @@ namespace Solar.CA
             // 
             // dgL_Dvsn
             // 
-            dataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgL_Dvsn.DefaultCellStyle = dataGridViewCellStyle43;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgL_Dvsn.DefaultCellStyle = dataGridViewCellStyle14;
             this.dgL_Dvsn.HeaderText = "구분";
             this.dgL_Dvsn.Name = "dgL_Dvsn";
             this.dgL_Dvsn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -1233,8 +1233,8 @@ namespace Solar.CA
             // 
             // dgL_Note
             // 
-            dataGridViewCellStyle44.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgL_Note.DefaultCellStyle = dataGridViewCellStyle44;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgL_Note.DefaultCellStyle = dataGridViewCellStyle15;
             this.dgL_Note.HeaderText = "비고";
             this.dgL_Note.Name = "dgL_Note";
             this.dgL_Note.Width = 80;
@@ -1365,41 +1365,41 @@ namespace Solar.CA
             // 
             // dgP_Pn
             // 
-            dataGridViewCellStyle45.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle45.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgP_Pn.DefaultCellStyle = dataGridViewCellStyle45;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgP_Pn.DefaultCellStyle = dataGridViewCellStyle16;
             this.dgP_Pn.HeaderText = "물번";
             this.dgP_Pn.Name = "dgP_Pn";
             this.dgP_Pn.Width = 55;
             // 
             // dgP_Tid
             // 
-            dataGridViewCellStyle46.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgP_Tid.DefaultCellStyle = dataGridViewCellStyle46;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgP_Tid.DefaultCellStyle = dataGridViewCellStyle17;
             this.dgP_Tid.HeaderText = "TID";
             this.dgP_Tid.Name = "dgP_Tid";
             this.dgP_Tid.Width = 70;
             // 
             // dgP_State
             // 
-            dataGridViewCellStyle47.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgP_State.DefaultCellStyle = dataGridViewCellStyle47;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgP_State.DefaultCellStyle = dataGridViewCellStyle18;
             this.dgP_State.HeaderText = "진행상태";
             this.dgP_State.Name = "dgP_State";
             this.dgP_State.Width = 80;
             // 
             // dgP_CntS
             // 
-            dataGridViewCellStyle48.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dgP_CntS.DefaultCellStyle = dataGridViewCellStyle48;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dgP_CntS.DefaultCellStyle = dataGridViewCellStyle19;
             this.dgP_CntS.HeaderText = "현N";
             this.dgP_CntS.Name = "dgP_CntS";
             this.dgP_CntS.Width = 50;
             // 
             // dgP_CntA
             // 
-            dataGridViewCellStyle49.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dgP_CntA.DefaultCellStyle = dataGridViewCellStyle49;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dgP_CntA.DefaultCellStyle = dataGridViewCellStyle20;
             this.dgP_CntA.HeaderText = "감N";
             this.dgP_CntA.Name = "dgP_CntA";
             this.dgP_CntA.Width = 50;
@@ -1714,8 +1714,8 @@ namespace Solar.CA
             // 
             // dgU_No
             // 
-            dataGridViewCellStyle50.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgU_No.DefaultCellStyle = dataGridViewCellStyle50;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgU_No.DefaultCellStyle = dataGridViewCellStyle21;
             this.dgU_No.HeaderText = "No";
             this.dgU_No.Name = "dgU_No";
             this.dgU_No.Width = 50;
@@ -1739,16 +1739,16 @@ namespace Solar.CA
             // 
             // dgU_Shr
             // 
-            dataGridViewCellStyle51.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgU_Shr.DefaultCellStyle = dataGridViewCellStyle51;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgU_Shr.DefaultCellStyle = dataGridViewCellStyle22;
             this.dgU_Shr.HeaderText = "공유";
             this.dgU_Shr.Name = "dgU_Shr";
             this.dgU_Shr.Width = 80;
             // 
             // dgU_Tid
             // 
-            dataGridViewCellStyle52.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dgU_Tid.DefaultCellStyle = dataGridViewCellStyle52;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dgU_Tid.DefaultCellStyle = dataGridViewCellStyle23;
             this.dgU_Tid.HeaderText = "TID";
             this.dgU_Tid.Name = "dgU_Tid";
             this.dgU_Tid.Width = 70;
@@ -1819,8 +1819,8 @@ namespace Solar.CA
             // 
             // dgF_No
             // 
-            dataGridViewCellStyle53.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgF_No.DefaultCellStyle = dataGridViewCellStyle53;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgF_No.DefaultCellStyle = dataGridViewCellStyle24;
             this.dgF_No.HeaderText = "No";
             this.dgF_No.Name = "dgF_No";
             this.dgF_No.Width = 50;
@@ -1849,16 +1849,16 @@ namespace Solar.CA
             // 
             // dgF_Wdt
             // 
-            dataGridViewCellStyle54.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgF_Wdt.DefaultCellStyle = dataGridViewCellStyle54;
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgF_Wdt.DefaultCellStyle = dataGridViewCellStyle25;
             this.dgF_Wdt.HeaderText = "등록일";
             this.dgF_Wdt.Name = "dgF_Wdt";
             this.dgF_Wdt.Width = 80;
             // 
             // dgF_Idx
             // 
-            dataGridViewCellStyle55.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dgF_Idx.DefaultCellStyle = dataGridViewCellStyle55;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dgF_Idx.DefaultCellStyle = dataGridViewCellStyle26;
             this.dgF_Idx.HeaderText = "idx";
             this.dgF_Idx.Name = "dgF_Idx";
             this.dgF_Idx.Width = 70;
@@ -1946,25 +1946,25 @@ namespace Solar.CA
             // 
             // dgP2_Pn
             // 
-            dataGridViewCellStyle56.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle56.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgP2_Pn.DefaultCellStyle = dataGridViewCellStyle56;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgP2_Pn.DefaultCellStyle = dataGridViewCellStyle27;
             this.dgP2_Pn.HeaderText = "물번";
             this.dgP2_Pn.Name = "dgP2_Pn";
             this.dgP2_Pn.Width = 55;
             // 
             // dgP2_Tid
             // 
-            dataGridViewCellStyle57.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgP2_Tid.DefaultCellStyle = dataGridViewCellStyle57;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgP2_Tid.DefaultCellStyle = dataGridViewCellStyle28;
             this.dgP2_Tid.HeaderText = "TID";
             this.dgP2_Tid.Name = "dgP2_Tid";
             this.dgP2_Tid.Width = 70;
             // 
             // dgP2_State
             // 
-            dataGridViewCellStyle58.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgP2_State.DefaultCellStyle = dataGridViewCellStyle58;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgP2_State.DefaultCellStyle = dataGridViewCellStyle29;
             this.dgP2_State.HeaderText = "진행상태";
             this.dgP2_State.Name = "dgP2_State";
             this.dgP2_State.Width = 80;
