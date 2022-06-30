@@ -28,10 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(wfCarDoc));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.fileSrch = new System.Windows.Forms.Button();
             this.fileUpload = new System.Windows.Forms.Button();
             this.dgU = new System.Windows.Forms.DataGridView();
+            this.dgU_No = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgU_LocFile = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgU_Ctgr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgU_Tid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgU_Shr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgU_RmtFile = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label3 = new System.Windows.Forms.Label();
@@ -97,13 +105,7 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.tidBox = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.fileSrch = new System.Windows.Forms.Button();
-            this.dgU_No = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgU_LocFile = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgU_Ctgr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgU_Tid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgU_Shr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgU_RmtFile = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.axAcroPDF1 = new AxAcroPDFLib.AxAcroPDF();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -112,6 +114,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgU)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -144,6 +148,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             // 
+            // fileSrch
+            // 
+            this.fileSrch.Location = new System.Drawing.Point(19, 86);
+            this.fileSrch.Name = "fileSrch";
+            this.fileSrch.Size = new System.Drawing.Size(126, 24);
+            this.fileSrch.TabIndex = 2;
+            this.fileSrch.Text = "파일 찾기";
+            this.fileSrch.UseVisualStyleBackColor = true;
+            this.fileSrch.Click += new System.EventHandler(this.fileSrch_Click);
+            // 
             // fileUpload
             // 
             this.fileUpload.BackColor = System.Drawing.SystemColors.MenuHighlight;
@@ -157,6 +171,7 @@
             // 
             // dgU
             // 
+            this.dgU.AllowUserToAddRows = false;
             this.dgU.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgU.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgU_No,
@@ -170,6 +185,38 @@
             this.dgU.RowTemplate.Height = 23;
             this.dgU.Size = new System.Drawing.Size(817, 779);
             this.dgU.TabIndex = 0;
+            // 
+            // dgU_No
+            // 
+            this.dgU_No.HeaderText = "No";
+            this.dgU_No.Name = "dgU_No";
+            // 
+            // dgU_LocFile
+            // 
+            this.dgU_LocFile.HeaderText = "파일명-로컬";
+            this.dgU_LocFile.Name = "dgU_LocFile";
+            this.dgU_LocFile.Width = 200;
+            // 
+            // dgU_Ctgr
+            // 
+            this.dgU_Ctgr.HeaderText = "종류";
+            this.dgU_Ctgr.Name = "dgU_Ctgr";
+            // 
+            // dgU_Tid
+            // 
+            this.dgU_Tid.HeaderText = "TID";
+            this.dgU_Tid.Name = "dgU_Tid";
+            // 
+            // dgU_Shr
+            // 
+            this.dgU_Shr.HeaderText = "공유";
+            this.dgU_Shr.Name = "dgU_Shr";
+            // 
+            // dgU_RmtFile
+            // 
+            this.dgU_RmtFile.HeaderText = "파일명-원격";
+            this.dgU_RmtFile.Name = "dgU_RmtFile";
+            this.dgU_RmtFile.Width = 200;
             // 
             // tabControl1
             // 
@@ -752,55 +799,23 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.axAcroPDF1);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(1077, 1047);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "none";
+            this.tabPage2.Text = "PDF";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // fileSrch
+            // axAcroPDF1
             // 
-            this.fileSrch.Location = new System.Drawing.Point(19, 86);
-            this.fileSrch.Name = "fileSrch";
-            this.fileSrch.Size = new System.Drawing.Size(126, 24);
-            this.fileSrch.TabIndex = 2;
-            this.fileSrch.Text = "파일 찾기";
-            this.fileSrch.UseVisualStyleBackColor = true;
-            this.fileSrch.Click += new System.EventHandler(this.fileSrch_Click);
-            // 
-            // dgU_No
-            // 
-            this.dgU_No.HeaderText = "No";
-            this.dgU_No.Name = "dgU_No";
-            // 
-            // dgU_LocFile
-            // 
-            this.dgU_LocFile.HeaderText = "파일명-로컬";
-            this.dgU_LocFile.Name = "dgU_LocFile";
-            this.dgU_LocFile.Width = 200;
-            // 
-            // dgU_Ctgr
-            // 
-            this.dgU_Ctgr.HeaderText = "종류";
-            this.dgU_Ctgr.Name = "dgU_Ctgr";
-            // 
-            // dgU_Tid
-            // 
-            this.dgU_Tid.HeaderText = "TID";
-            this.dgU_Tid.Name = "dgU_Tid";
-            // 
-            // dgU_Shr
-            // 
-            this.dgU_Shr.HeaderText = "공유";
-            this.dgU_Shr.Name = "dgU_Shr";
-            // 
-            // dgU_RmtFile
-            // 
-            this.dgU_RmtFile.HeaderText = "파일명-원격";
-            this.dgU_RmtFile.Name = "dgU_RmtFile";
-            this.dgU_RmtFile.Width = 200;
+            this.axAcroPDF1.Enabled = true;
+            this.axAcroPDF1.Location = new System.Drawing.Point(0, 2);
+            this.axAcroPDF1.Name = "axAcroPDF1";
+            this.axAcroPDF1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axAcroPDF1.OcxState")));
+            this.axAcroPDF1.Size = new System.Drawing.Size(821, 901);
+            this.axAcroPDF1.TabIndex = 0;
             // 
             // wfCarDoc
             // 
@@ -820,6 +835,8 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -902,5 +919,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgU_Tid;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgU_Shr;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgU_RmtFile;
+        private AxAcroPDFLib.AxAcroPDF axAcroPDF1;
     }
 }

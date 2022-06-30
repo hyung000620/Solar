@@ -1930,7 +1930,7 @@ namespace Solar.CA
                     rmtThumb = string.Format(@"{0}/T_{1}", rmtPath, fileNm);
                     ftp1.Upload(locThumb, rmtThumb);
                     successFlag = true;
-                }
+                };
             }
             
             if(successFlag)

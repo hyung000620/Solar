@@ -10,6 +10,8 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using iTextSharp.text.pdf;
+using iTextSharp.text.pdf.parser;
 
 namespace Solar.Mgmt
 {
@@ -69,6 +71,27 @@ namespace Solar.Mgmt
                 dgU["dgU_Tid", i].Value = tid; // TID
                 dgU["dgU_Shr", i].Value = shr; // 공유
                 dgU["dgU_RmtFile", i].Value = rmtNm; // 파일명 - 원격
+                axAcroPDF1.src = fullNm;
+
+
+                string strText = string.Empty;
+                try
+                {
+                    PdfReader reader = new PdfReader(fullNm);
+                    for(int pageNo = 1; pageNo<=reader.NumberOfPages; pageNo++)
+                    {
+                        ITextExtractionStrategy strategy = new SimpleTextExtractionStrategy();
+                        string extractedText = PdfTextExtractor.GetTextFromPage(reader, pageNo,strategy);
+                        byte[] utf8Bytes = Encoding.Convert(Encoding.Default, Encoding.UTF8, Encoding.Default.GetBytes(extractedText));
+                        string pageText = Encoding.UTF8.GetString(utf8Bytes);
+
+                        tidBox.AppendText(pageText);
+                    }
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
             dgU.ClearSelection();
         }
@@ -213,7 +236,7 @@ namespace Solar.Mgmt
                 rmtNm = row.Cells["dgU_RmtFile"].Value.ToString();
                 if (rmtNm.Contains("오류")) continue;*/
 
-                //tid = row.Cells["dgU_Tid"].Value.ToString();
+                tid = row.Cells["dgU_Tid"].Value.ToString();
                 /*shr = row.Cells["dgU_Shr"].Value.ToString();
                 locFile = row.Cells["dgU_LocFile"].Value.ToString();
                 FileInfo fi = new FileInfo(locFile);
@@ -232,7 +255,7 @@ namespace Solar.Mgmt
                 year = sn.Substring(0, 4);
                 rmtPath = string.Format(@"{0}/{1}/{2}", ctgr, spt, year);
                 rmtFile = string.Format(@"{0}/{1}", rmtPath, rmtNm);*/
-                //tidBox.Text = tid;
+                tidBox.Text = tid;
                 /*if (ftp1.Upload(locFile, rmtFile))
                 {
                     if (thumb == "Y")
